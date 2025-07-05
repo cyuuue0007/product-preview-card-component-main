@@ -17,10 +17,12 @@
       </div>
       <section class="card-content">
         <div class="tittle-mini">
-          <p>Perfume</p>
+          <p>PERFUME</p>
         </div>
         <div class="introduce">
-          <h1>Gabrielle Essence Eau De Parfum</h1>
+          <h1>Gabrielle</h1>
+          <h1>Essence Eau</h1>
+          <h1>De Parfum</h1>
           <p> A floral, solar and voluptuous interpretation composed by Olivier Polge,Perfumer-Creator for the House of
             CHANEL.
           </p>
@@ -29,10 +31,13 @@
           <h1>$149.99</h1>
           <p>$169.99</p>
         </div>
-        <div class="add-btn">
-          <img src="./images/icon-cart.svg" class="cart-img" alt="cart-img">
-          <p>Add to Cart</p>
+        <div class="add-btn-wrapper">
+          <div class="add-btn">
+            <img src="./images/icon-cart.svg" class="cart-img" alt="cart-img">
+            <p>Add to Cart</p>
+          </div>
         </div>
+
       </section>
     </div>
   </div>
@@ -60,11 +65,23 @@
 
   .wrapper {
     display: flex;
-    max-width: 800px;
+    max-width: 600px;
     background-color: #FFFFFF;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .card-wrapper img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+    }
   }
 
   .card-wrapper {
@@ -90,7 +107,63 @@
   }
 
   .tittle-mini p {
-    margin-bottom: 30px;
+    letter-spacing: 0.25rem;
+    color: #797979;
+  }
+
+  .introduce h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .introduce p {
+    color: #797979;
+    padding-top: 1.5rem;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .price h1 {
+    font-size: 2rem;
+    color: #3D8168;
+    font-weight: 600;
+  }
+
+  .price p {
+    text-decoration: line-through;
+    color: #797979;
+  }
+
+  .add-btn-wrapper {
+    background-color: #3D8168;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .add-btn-wrapper:hover {
+    background-color: #336854;
+  }
+
+  .add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .add-btn p {
+    color: #FFFFFF;
+    font-size: 0.85rem;
   }
 </style>
 
